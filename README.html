@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Sostenibilidad para Emprendedores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Paleta de Colores Refinada
+        Verde Oscuro Principal: #1A4D2E (Verde bosque profundo)
+        Verde Medio Acento: #3A805E (Verde esmeralda apagado)
+        Verde Claro Sutil: #C8E6C9 (Menta muy suave)
+        Azul Cielo/Agua: #E0F2F7 (Azul pálido y limpio)
+        Gris Oscuro Texto: #2C3E50 (Gris carbón, muy legible)
+        Fondo General: #F8FBF8 (Casi blanco, muy ligero toque verde)
+        */
+
+        body {
+            font-family: 'Open Sans', sans-serif; /* Fuente principal del cuerpo */
+            margin: 0;
+            padding: 0;
+            background-color: #F8FBF8; /* Fondo casi blanco para elegancia */
+            color: #2C3E50; /* Gris carbón para texto principal */
+            line-height: 1.7; /* Mayor interlineado para legibilidad elegante */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            /* Fondo de imagen de sostenibilidad - ¡REEMPLAZA ESTA URL CON TU IMAGEN FINAL! */
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3vhwG6RqMn_uqNLDx1_COpaRroWeMDIfkZ23UqrQZtgpDK0w3wCWjsaNw7aPowMKuMfs&usqp=CAU);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            padding-bottom: 60px; /* Más padding al final */
+            box-sizing: border-box;
+        }
+
+        /* Contenedor del Logo */
+        .logo-container {
+            width: 220px; /* Un poco más grande para destacarlo */
+            margin-top: 30px; /* Más margen superior */
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.95); /* Blanco más opaco */
+            border-radius: 15px; /* Bordes más suaves */
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil pero definida */
+            border: 1px solid #E0F2F7; /* Borde sutil */
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 900px; /* Ancho máximo ligeramente mayor */
+            width: 90%;
+            margin: 30px auto; /* Márgenes ajustados */
+            background-color: rgba(255, 255, 255, 0.98); /* Fondo casi opaco para el contenido */
+            padding: 40px 50px; /* Más padding interno */
+            border-radius: 15px; /* Bordes más redondeados */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombra moderna y suave */
+            position: relative;
+            border: 1px solid #C8E6C9; /* Borde sutil */
+        }
+
+        /* Header Decorativo */
+        .header-deco {
+            background-color: #1A4D2E; /* Verde oscuro principal */
+            padding: 30px;
+            border-radius: 12px 12px 0 0; /* Coincide con el contenedor */
+            margin: -40px -50px 40px -50px; /* Ajusta para sobresalir */
+            text-align: center;
+            position: relative;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+        }
+        .header-deco h1 {
+            font-family: 'Montserrat', sans-serif; /* Montserrat para títulos */
+            font-weight: 700;
+            font-size: 2.8em; /* Título principal grande y audaz */
+            color: #FFFFFF;
+            margin: 0;
+            padding-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px; /* Espaciado para un look moderno */
+        }
+        .header-deco p {
+            font-family: 'Open Sans', sans-serif;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        /* Icono de Hoja */
+        .header-deco::before {
+            content: '🍃'; /* Un icono de hoja un poco diferente o '🌿' */
+            font-size: 4em; /* Icono más grande y prominente */
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #C8E6C9; /* Verde claro sutil */
+            background-color: rgba(255, 255, 255, 0.98);
+            border-radius: 50%;
+            padding: 10px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            line-height: 1;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #3A805E; /* Verde esmeralda para sub-títulos */
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #E0F2F7; /* Azul pálido para la línea divisoria */
+            font-weight: 600;
+            font-size: 2.2em; /* H2 más destacado */
+            letter-spacing: 0.5px;
+        }
+        .question-block {
+            margin-bottom: 35px;
+            padding: 25px;
+            background-color: #FFFFFF; /* Fondo blanco puro para las preguntas */
+            border-radius: 12px;
+            border: 1px solid #E0F2F7;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .question {
+            font-family: 'Merriweather', serif; /* Merriweather para las preguntas */
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #2C3E50;
+            font-size: 1.15em; /* Preguntas ligeramente más grandes */
+            line-height: 1.5;
+        }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px; /* Mayor espacio entre opciones */
+            justify-content: space-around;
+        }
+        .options label {
+            flex-basis: calc(20% - 18px); /* Ajuste de base */
+            min-width: 65px;
+            text-align: center;
+            padding: 16px 0;
+            border: 2px solid #D5DBE1; /* Borde gris suave */
+            border-radius: 10px; /* Más redondeado */
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background-color: #FDFEFE;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            font-size: 1.3em; /* Números de opción más grandes */
+            color: #4F6272; /* Gris más suave para los números */
+            position: relative;
+        }
+        .options label:hover {
+            border-color: #3A805E; /* Verde esmeralda al pasar el ratón */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .options input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .options input[type="radio"]:checked + span {
+            background-color: #1A4D2E; /* Verde oscuro principal para seleccionado */
+            color: white;
+            border-color: #1A4D2E;
+            transform: scale(1.1); /* Ligeramente más grande al seleccionar */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .options label span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px; /* Ajusta si cambias el border-radius del label */
+            transition: all 0.25s ease;
+        }
+
+        /* Estilo para la Propuesta de Valor (más elegante y destacada) */
+        .value-proposition {
+            background-color: #e6f3eb; /* Fondo verde muy suave y claro */
+            border-left: 6px solid #3A805E; /* Línea verde esmeralda para destacar */
+            padding: 25px 30px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            text-align: left;
+            font-family: 'Open Sans', sans-serif; /* Utiliza Open Sans para el texto */
+            font-size: 1.1em;
+            color: #1A4D2E; /* Texto en verde oscuro */
+            line-height: 1.6;
+        }
+        .value-proposition p {
+            margin: 0 0 12px 0;
+            font-weight: 400; /* Normal para los párrafos */
+        }
+        .value-proposition p strong {
+            font-weight: 700; /* Negrita para destacar palabras clave */
+            color: #1A4D2E;
+        }
+        .value-proposition ul {
+            list-style: none; /* Quita viñetas por defecto */
+            padding: 0;
+            margin: 15px 0 0 0;
+        }
+        .value-proposition ul li {
+            position: relative;
+            padding-left: 30px; /* Más espacio para la viñeta */
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-size: 1.05em; /* Ligeramente más grande */
+        }
+        .value-proposition ul li::before {
+            content: '✓'; /* Viñeta personalizada con tick */
+            position: absolute;
+            left: 0;
+            color: #2E7D32; /* Verde más oscuro para el tick */
+            font-weight: bold;
+            font-size: 1.2em; /* Tick más grande */
+        }
+
+        .instructions {
+            background-color: #E0F2F7; /* Azul pálido para instrucciones */
+            border: 1px solid #B3E0EE;
+            color: #2C3E50; /* Gris carbón para el texto */
+            padding: 22px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.05em;
+            font-weight: 400;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+            line-height: 1.5;
+        }
+        .instructions strong {
+            color: #1A4D2E; /* Verde oscuro para destacar */
+            font-weight: 600;
+        }
+
+        button {
+            display: block;
+            width: 85%; /* Botón un poco más ancho */
+            max-width: 350px;
+            margin: 50px auto 30px auto;
+            padding: 20px; /* Más padding */
+            font-size: 1.4em; /* Botón aún más grande */
+            background-color: #3A805E; /* Verde esmeralda para el botón */
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease;
+            font-weight: 700;
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.5px;
+        }
+        button:hover {
+            background-color: #1A4D2E; /* Verde oscuro principal al pasar el ratón */
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #result {
+            margin-top: 50px;
+            padding: 35px;
+            background-color: #E0F2F7; /* Azul pálido para el resultado */
+            border-radius: 12px;
+            border: 1px solid #B3E0EE;
+            text-align: center;
+            font-size: 1.4em; /* Resultado más grande */
+            color: #2C3E50;
+            font-weight: bold;
+            display: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .result-interpretation {
+            margin-top: 25px;
+            font-size: 1.1em;
+            font-weight: normal;
+            color: #4F6272; /* Gris suave para la interpretación */
+            line-height: 1.6;
+            font-family: 'Merriweather', serif; /* Merriweather para la interpretación */
+        }
+        .footer {
+            text-align: center;
+            margin-top: 70px;
+            font-size: 0.9em;
+            color: #888;
+            padding-top: 30px;
+            border-top: 1px solid #E0F2F7;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 40px;
+            }
+            .logo-container {
+                width: 180px;
+                margin-top: 20px;
+            }
+            .container {
+                width: 95%;
+                padding: 25px 30px;
+                margin: 20px auto;
+            }
+            .header-deco {
+                margin: -25px -30px 25px -30px;
+                padding: 20px;
+            }
+            .header-deco h1 {
+                font-size: 2.2em;
+            }
+            .header-deco::before {
+                font-size: 3.5em;
+                top: -15px;
+            }
+            h2 {
+                font-size: 1.8em;
+                margin-top: 35px;
+                margin-bottom: 25px;
+            }
+            .question-block {
+                padding: 20px;
+                margin-bottom: 25px;
+            }
+            .question {
+                font-size: 1.05em;
+            }
+            .options {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .options label {
+                flex-basis: auto;
+                width: 100%;
+                text-align: left;
+                padding-left: 25px;
+                font-size: 1.1em;
+            }
+            .options input[type="radio"]:checked + span {
+                 transform: scale(1.03); /* Menos escalado en móviles */
+            }
+            button {
+                width: 90%;
+                font-size: 1.2em;
+                padding: 16px;
+                margin-top: 35px;
+            }
+            #result {
+                font-size: 1.2em;
+                padding: 25px;
+            }
+            .result-interpretation {
+                font-size: 1em;
+            }
+            .value-proposition {
+                padding: 20px 20px;
+                font-size: 1em;
+            }
+            .value-proposition ul li {
+                font-size: 0.95em;
+                padding-left: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="image_4d80bd.png" alt="Logo Universidad San Sebastián">
+    </div>
+    <div class="container">
+        <div class="header-deco">
+            <h1>Diagnóstico de Sostenibilidad</h1>
+            <p>Para Emprendedores de la Región del Biobío</p>
+        </div>
+
+        <div class="value-proposition">
+            <p>Para emprendedores de la Región del Biobío que buscan **impulsar su crecimiento y destacarse** en el mercado actual, este diagnóstico les ofrece la **hoja de ruta práctica** para **transformar su impacto ambiental en una ventaja competitiva rentable**.</p>
+            <p>Descubre cómo la gestión inteligente en tu negocio puede:</p>
+            <ul>
+                <li>Optimizar tus costos y reducir residuos de manera efectiva.</li>
+                <li>Conquistar a consumidores conscientes y construir una marca con mayor valor y propósito.</li>
+                <li>Abrir nuevas oportunidades de negocio y acceder a mercados que valoran el compromiso sostenible.</li>
+            </ul>
+            <p><strong>¡Es tiempo de que tu negocio no solo crezca, sino que prospere de forma sostenible en nuestra región!</strong></p>
+        </div>
+
+        <p class="instructions">
+            Esta ficha te ayudará a tener una visión general de la sostenibilidad de tu negocio. Para cada afirmación, selecciona el número que mejor represente tu situación actual:
+        </p>
+
+        <div class="instructions">
+            <strong>Opciones de Respuesta:</strong><br>
+            <strong>1:</strong> Muy Bajo / No implementado (No hacemos esto en absoluto o es mínimo)<br>
+            <strong>2:</strong> Bajo (Lo estamos considerando, pero con pocas acciones concretas)<br>
+            <strong>3:</strong> Moderado / En Proceso (Hemos iniciado acciones, pero hay mucho por mejorar)<br>
+            <strong>4:</strong> Alto (Tenemos acciones claras y resultados, pero podemos optimizar)<br>
+            <strong>5:</strong> Muy Alto / Totalmente implementado (Es una práctica fundamental y optimizada en nuestro negocio)
+        </div>
+
+        <form id="sustainabilityForm">
+            <h2>1. Uso de Ingredientes y Materiales Locales</h2>
+            <div class="question-block">
+                <p class="question">¿Priorizas la compra de materias primas e ingredientes a <strong>proveedores locales</strong> (de tu región o cercanos)? (Ej. verduras de agricultores locales para tu restaurante/gastronomía, lanas de productores locales para tu textil).</p>
+                <div class="options">
+                    <label><input type="radio" name="q1_1" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q1_1" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q1_1" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q1_1" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q1_1" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿Mantienes una <strong>relación directa y de apoyo</strong> con tus proveedores locales?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1_2" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q1_2" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q1_2" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q1_2" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q1_2" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿Tu compra local contribuye al <strong>desarrollo económico</strong> de tu comunidad?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1_3" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q1_3" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q1_3" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q1_3" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q1_3" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿Consideras la <strong>estacionalidad</strong> de los productos locales al planificar tus insumos (ej. menú de temporada, colección textil con fibras de estación)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1_4" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q1_4" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q1_4" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q1_4" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q1_4" value="5"><span>5</span></label>
+                </div>
+            </div>
+
+            <h2>2. Gestión de Residuos</h2>
+            <div class="question-block">
+                <p class="question">¿Tienes un plan para <strong>reducir los residuos</strong> que genera tu emprendimiento (ej. minimización de mermas en cocina, optimización de cortes en textil)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2_1" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q2_1" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q2_1" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q2_1" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q2_1" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿<strong>Clasificas y separas adecuadamente</strong> tus residuos (orgánicos, papel/cartón, plásticos, vidrio, textiles, etc.)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2_2" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q2_2" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q2_2" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q2_2" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q2_2" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿Dispones de un sistema para **reciclar o compostar** tus residuos orgánicos/reciclables o tienes acuerdos con gestores de residuos locales?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2_3" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q2_3" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q2_3" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q2_3" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q2_3" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿Reutilizas materiales o subproductos dentro de tu propio negocio (ej. restos de tela para accesorios, cáscaras para caldos, café para compost)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2_4" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q2_4" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q2_4" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q2_4" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q2_4" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿Evitas el uso de artículos desechables innecesarios en tus operaciones diarias?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2_5" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q2_5" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q2_5" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q2_5" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q2_5" value="5"><span>5</span></label>
+                </div>
+            </div>
+
+            <h2>3. Envases</h2>
+            <div class="question-block">
+                <p class="question">¿Utilizas envases que son **reutilizables, reciclables o compostables** para tus productos o alimentos para llevar?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3_1" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q3_1" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q3_1" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q3_1" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q3_1" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿Has buscado **reducir la cantidad de material** en tus envases y etiquetas?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3_2" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q3_2" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q3_2" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q3_2" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q3_2" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿Ofreces **alternativas de relleno o retorno de envases** a tus clientes (ej. descuentos por traer tu propio envase para café o comida)?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3_3" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q3_3" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q3_3" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q3_3" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q3_3" value="5"><span>5</span></label>
+                </div>
+            </div>
+            <div class="question-block">
+                <p class="question">¿Informas claramente a tus clientes sobre **cómo desechar o reutilizar** tus envases de forma sostenible?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3_4" value="1" required><span>1</span></label>
+                    <label><input type="radio" name="q3_4" value="2"><span>2</span></label>
+                    <label><input type="radio" name="q3_4" value="3"><span>3</span></label>
+                    <label><input type="radio" name="q3_4" value="4"><span>4</span></label>
+                    <label><input type="radio" name="q3_4" value="5"><span>5</span></label>
+                </div>
+            </div>
+
+            <button type="submit">Calcular mi Puntaje de Sostenibilidad</button>
+        </form>
+
+        <div id="result">
+            </div>
+
+        <div class="footer">
+            <p>Diagnóstico creado para emprendedores del Biobío</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sustainabilityForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+            let puntajeTotal = 0;
+            let preguntasContadas = 0;
+            const maxPuntajePorPregunta = 5;
+
+            // Recopilar respuestas de la Categoría 1: Uso de Ingredientes y Materiales Locales
+            const q1_1 = document.querySelector('input[name="q1_1"]:checked');
+            const q1_2 = document.querySelector('input[name="q1_2"]:checked');
+            const q1_3 = document.querySelector('input[name="q1_3"]:checked');
+            const q1_4 = document.querySelector('input[name="q1_4"]:checked');
+
+            if (q1_1) { puntajeTotal += parseInt(q1_1.value); preguntasContadas++; }
+            if (q1_2) { puntajeTotal += parseInt(q1_2.value); preguntasContadas++; }
+            if (q1_3) { puntajeTotal += parseInt(q1_3.value); preguntasContadas++; }
+            if (q1_4) { puntajeTotal += parseInt(q1_4.value); preguntasContadas++; }
+
+            // Recopilar respuestas de la Categoría 2: Gestión de Residuos
+            const q2_1 = document.querySelector('input[name="q2_1"]:checked');
+            const q2_2 = document.querySelector('input[name="q2_2"]:checked');
+            const q2_3 = document.querySelector('input[name="q2_3"]:checked');
+            const q2_4 = document.querySelector('input[name="q2_4"]:checked');
+            const q2_5 = document.querySelector('input[name="q2_5"]:checked');
+
+            if (q2_1) { puntajeTotal += parseInt(q2_1.value); preguntasContadas++; }
+            if (q2_2) { puntajeTotal += parseInt(q2_2.value); preguntasContadas++; }
+            if (q2_3) { puntajeTotal += parseInt(q2_3.value); preguntasContadas++; }
+            if (q2_4) { puntajeTotal += parseInt(q2_4.value); preguntasContadas++; }
+            if (q2_5) { puntajeTotal += parseInt(q2_5.value); preguntasContadas++; }
+
+            // Recopilar respuestas de la Categoría 3: Envases
+            const q3_1 = document.querySelector('input[name="q3_1"]:checked');
+            const q3_2 = document.querySelector('input[name="q3_2"]:checked');
+            const q3_3 = document.querySelector('input[name="q3_3"]:checked');
+            const q3_4 = document.querySelector('input[name="q3_4"]:checked');
+
+            if (q3_1) { puntajeTotal += parseInt(q3_1.value); preguntasContadas++; }
+            if (q3_2) { puntajeTotal += parseInt(q3_2.value); preguntasContadas++; }
+            if (q3_3) { puntajeTotal += parseInt(q3_3.value); preguntasContadas++; }
+            if (q3_4) { puntajeTotal += parseInt(q3_4.value); preguntasContadas++; }
+
+            // Verificar que todas las preguntas han sido respondidas
+            const totalPreguntasEsperadas = 4 + 5 + 4; // 4 en Cat1, 5 en Cat2, 4 en Cat3 = 13 preguntas
+            if (preguntasContadas < totalPreguntasEsperadas) {
+                alert('Por favor, responde todas las preguntas antes de calcular tu puntaje.');
+                return;
+            }
+
+            const maxPuntajePosible = preguntasContadas * maxPuntajePorPregunta;
+            let porcentajeSostenibilidad = 0;
+
+            if (maxPuntajePosible > 0) {
+                porcentajeSostenibilidad = (puntajeTotal / maxPuntajePosible) * 100;
+            }
+
+            const resultDiv = document.getElementById('result');
+            let interpretation = '';
+
+            if (porcentajeSostenibilidad >= 85) {
+                interpretation = "¡Excelente! Eres un emprendedor altamente sostenible. ¡Sigue así y busca nuevas oportunidades de mejora!";
+            } else if (porcentajeSostenibilidad >= 65) {
+                interpretation = "Muy bien. Tu emprendimiento tiene sólidas prácticas de sostenibilidad. Hay margen para el crecimiento continuo.";
+            } else if (porcentajeSostenibilidad >= 40) {
+                interpretation = "En proceso. Tu emprendimiento ha iniciado el camino hacia la sostenibilidad. Identifica las áreas con menor puntaje para enfocarte.";
+            } else {
+                interpretation = "Hay grandes oportunidades para integrar prácticas de sostenibilidad. Cada pequeño cambio puede generar un impacto significativo y beneficios para tu negocio.";
+            }
+
+            resultDiv.innerHTML = `
+                Tu puntaje total es: ${puntajeTotal} de ${maxPuntajePosible} posibles.<br>
+                Tu emprendimiento es <strong>${porcentajeSostenibilidad.toFixed(2)}%</strong> sostenible según este diagnóstico.
+                <div class="result-interpretation">${interpretation}</div>
+            `;
+            resultDiv.style.display = 'block'; // Muestra el resultado
+            resultDiv.scrollIntoView({ behavior: 'smooth' }); // Desplaza suavemente hasta el resultado
+        });
+    </script>
+</body>
+</html>
